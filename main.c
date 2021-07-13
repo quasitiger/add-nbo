@@ -3,11 +3,16 @@
 
 int main(int argc, char * argv[])
 {
-	
-	uint32_t* arr = (uint32_t*)malloc(sizeof(uint32_t) * argc-1);
-	uint32_t hex = 0;
-	if( argc < 1 )
+
+	if( argc < 2 )
+	{
+		printf("usage : ./add-nbo file1 file2 ...\n");
 		return 0;
+	}
+
+	uint32_t* arr = (uint32_t*)malloc(sizeof(uint32_t) * argc-1);
+        uint32_t hex = 0;
+
 	//printf("hex : %08x\n", hex);	
 	//printf("argc : %d\n", argc);
 
