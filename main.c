@@ -7,7 +7,7 @@ int main(int argc, char * argv[])
 	if( argc < 2 )
 	{
 		printf("usage : ./add-nbo file1 file2 ...\n");
-		return 0;
+		exit(0);
 	}
 
 	uint32_t* arr = (uint32_t*)malloc(sizeof(uint32_t) * argc-1);
@@ -37,7 +37,7 @@ int main(int argc, char * argv[])
 		printf(" + ");
 	}
 	printf(" = %d(%#04x)\n", hex, hex);
-	
+	free(arr);	
 	return 0;
 }
 	
